@@ -9,6 +9,11 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *operandButtonTapped;
+@property (weak, nonatomic) IBOutlet UITextField *operand1;
+@property (weak, nonatomic) IBOutlet UITextField *operand2;
+@property (weak, nonatomic) IBOutlet UILabel *answerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *operandLabel;
 
 @end
 
@@ -17,6 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)backgroundButton:(id)sender {
+    [self.operand1 resignFirstResponder];
+    [self.operand2 resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
